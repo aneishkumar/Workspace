@@ -63,12 +63,7 @@ public class MainController {
 		  return "contactus";
 		  
 	}
-	@RequestMapping("/login2")
-	public String showlogin()
-	{
-		  return "login";
-		  
-	}
+	
 	
 	@RequestMapping("/aboutus")
 	public ModelAndView showAbout()

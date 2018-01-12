@@ -15,8 +15,9 @@ public class User {
 	
 	private String name;
 	private String emailid;
-	private String age;
+	private String role="ROLE_USER";
 	private String password;
+	private Boolean enabled=true;
 	private String mobilenumber;
 	private String address;
 	public String getUsername() {
@@ -39,12 +40,7 @@ public class User {
 	public void setEmailid(String emailid) {
 		this.emailid = emailid;
 	}
-	public String getAge() {
-		return age;
-	}
-	public void setAge(String age) {
-		this.age = age;
-	}
+	
 	public String getPassword() {
 		return password;
 	}

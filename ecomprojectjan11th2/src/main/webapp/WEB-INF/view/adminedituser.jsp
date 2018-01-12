@@ -19,8 +19,6 @@
     <form:input type="text" path="name" value="${userdata.name}" /><br>
     <br><label><b>Email ID</b></label>
     <form:input type="text" path="emailid" value="${userdata.emailid}" /><br>
-    <br><label><b>Age</b></label>
-    <form:input type="text" path="age" value="${userdata.age}" /><br>
     <br><label><b>Password</b></label>
     <form:input type="password" path="password" value="${userdata.password}" /><br>
     <br><label><b>Mobile Number</b></label>

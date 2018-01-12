@@ -55,10 +55,6 @@ if (name==null || name==""){
 			<td>Password :</td>
 			<td><form:password path="password" /></td>
 		</tr>
-        <tr>
-			<td>Age :</td>
-			<td><form:input path="age" /></td>
-		</tr>
 		<tr>
 			<td>Mobile Number :</td>
 			<td><form:input path="mobilenumber" /></td>

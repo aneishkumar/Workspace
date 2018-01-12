@@ -17,7 +17,7 @@
           <th>Username</th>
             <th>Name</th>
             <th>Email Id</th>
-            <th>Age</th>
+            
             <th>Password</th>
             <th>Mobile Number</th>
             <th>Address</th>
@@ -30,7 +30,7 @@
                     <td>${User.username}</td>
                     <td>${User.name}</td>
                      <td>${User.emailid}</td>
-                      <td>${User.age}</td>
+                      
                     <td>${User.password}</td>
                     <td>${User.mobilenumber}</td>
                     <td>${User.address}</td>
