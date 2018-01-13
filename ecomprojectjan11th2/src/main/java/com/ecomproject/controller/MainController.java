@@ -43,12 +43,6 @@ public class MainController {
 		  return "Login";
 		  
 	}
-	@RequestMapping("/Registerseller")
-	public String showregister4()
-	{
-		  return "RegisterSeller";
-		  
-	}
 	
 	
 	
@@ -65,14 +59,6 @@ public class MainController {
 	}
 	
 	
-	@RequestMapping("/aboutus")
-	public ModelAndView showAbout()
-	{
-		String s="Project";
-		 ModelAndView mv=new ModelAndView("aboutus","test",s);
-		 
-		return mv; 
-	}
-
+	
 
 }

@@ -16,10 +16,10 @@
 						http://www.springframework.org/schema/security/spring-security.xsd">
 <security:http auto-config="true" use-expressions="true">
 	<security:intercept-url pattern="/adminuser" access="hasRole('ROLE_ADMIN')" />
-  <security:intercept-url pattern="/aboutus" access="hasRole('ROLE_USER')" />
+  <security:intercept-url pattern="" access="hasRole('ROLE_USER')" />
  	
-		<security:form-login login-page="/Login" default-target-url="/" login-processing-url="/performlogin" authentication-failure-url="/Login" authentication-success-forward-url="/starting" />
-		<security:logout logout-url="/aboutus" invalidate-session="true" logout-success-url="/starting" />
+		<security:form-login login-page="/Login" default-target-url="/" login-processing-url="/performlogin" authentication-failure-url="/Login" authentication-success-forward-url="/loginsuccess" />
+		<security:logout logout-url="/performlogout" invalidate-session="true" logout-success-url="/" />
 		<security:csrf disabled="true" />
 </security:http>
 	

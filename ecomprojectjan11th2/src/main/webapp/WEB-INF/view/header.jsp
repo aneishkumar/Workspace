@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <head>
   <title>Ecommerce</title>
@@ -49,11 +50,15 @@
       <a class="navbar-brand" href="starting"><font color="white">E-RESTURANT</font></a>
     </div>
     <ul class="nav navbar-nav">
+      <c:when test="${sessionScope.UserLoggedIn != null}">
+      
       <li ><a href="home"><font color="white">Home</font></a></li>
       <li ><a href="aboutus"><font color="white">About us</font></a></li>      
       <li><a href="register"><font color="white">Register User</font></a></li>
       <li><a href="admin"><font color="white">Admin</font></a></li>
       <li><a href="Login"><font color="white">Login</font></a></li>
+       </c:when>
+        
         
       
       <li> <form class="navbar-form navbar-left" action="">

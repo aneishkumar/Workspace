@@ -14,9 +14,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<center>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
-   <div class="carousel-inner" role="listbox" style=" width:100%; height: 625px !important;">
+   <div class="carousel-inner" role="listbox" style=" width:1271px; height: 650px ;">
 
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -31,7 +31,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-     <img src="resources/image1.jpg" alt="image1" style="width:100% max-height:50px"> 
+     <img src="resources/image1.jpg" alt="image1" "> 
      
       </div>
 
@@ -63,6 +63,7 @@
       <span class="sr-only">Next</span>
       </a>
       </div>
+      </center>
 
 </body>
 <%@include file="footer.jsp" %>

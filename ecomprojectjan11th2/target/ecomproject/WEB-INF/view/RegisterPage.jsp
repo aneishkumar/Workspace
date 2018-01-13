@@ -5,17 +5,37 @@
 <%@include file="header.jsp" %><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <title>Register</title>
 </head>
 <body>
+<script>  
+function validateform(){ 
+	
+var name=document.$(user.username);
+var password=document.myform.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+}  
+</script>
+
 <center>
 <font color="red"><b>
 <h2>Register Page</h2>
-<form:form action="Register" method="POST" commandName="user">
+<form:form name="myForm" id="formregister" action="Register" method="POST" commandName="user" onsubmit="return validateform()" >
 	<table>
 	<tr>
 			<td>User Name :</td>
-			<td><form:input path="username" /></td>
+			<td><form:input path="username"   /> </td>
 		</tr>
 	
 		<tr>
@@ -35,10 +55,6 @@
 			<td>Password :</td>
 			<td><form:password path="password" /></td>
 		</tr>
-        <tr>
-			<td>Age :</td>
-			<td><form:input path="age" /></td>
-		</tr>
 		<tr>
 			<td>Mobile Number :</td>
 			<td><form:input path="mobilenumber" /></td>
@@ -52,7 +68,12 @@
 </form:form>
 </font>
 </center>
-</body>
 
+
+
+
+
+
+</body>
 </html>
 <%@include file="footer.jsp" %>

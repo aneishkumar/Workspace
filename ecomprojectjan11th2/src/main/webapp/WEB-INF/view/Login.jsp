@@ -9,25 +9,21 @@
 </head>
 <body>
 
-<div align="center">
-<img  src="resources/eleventh.jpg" class="img-responsive" width="500" height="200"/>
-</div>
-<div align="justify">
-<div align="center">
+
 
 <div class="container" style="margin-top:40px" ">
 		<div class="row">
 			<div class="col-sm-6 col-md-4 col-md-offset-4">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<strong> Sign Up here</strong>
+						<strong> Login Here</strong>
 					</div>
 					<br/>
 					<div align="center">
 					
 					</div>
 					<div class="panel-body">
-						<form action="perform_login" method="post">
+						<form action="performlogin" method="post">
 							
 							<fieldset>
 								<div class="row">
@@ -62,11 +58,7 @@
 							
 					</div>
 					</div>
-					<div class="panel-footer ">
-						New User? <a href="Register" onClick=""> Sign Up Here </a>
-						</br>
-						Forgot Password?<a href="ForgetPassword" onClick="">Click here..</a>
-					</div>
+					
 					
                 </div>
 			</div>

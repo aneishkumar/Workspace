@@ -15,7 +15,7 @@
 <script>  
 function validateform(){ 
 	
-var name=d 
+var name=document.$(user.username);
 var password=document.myform.password.value;  
   
 if (name==null || name==""){  

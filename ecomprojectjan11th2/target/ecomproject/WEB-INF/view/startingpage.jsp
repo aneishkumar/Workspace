@@ -14,45 +14,43 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<center>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+   <div class="carousel-inner" role="listbox" style=" width:1271px; height: 650px ;">
+
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
       <li data-target="#myCarousel" data-slide-to="3"></li>
-      <li data-target="#myCarousel" data-slide-to="4"></li>
+      
     </ol>
+    
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-     <img src="/resources/image1.jpg" alt="image1" style="width:100%;"> 
+     <img src="resources/image1.jpg" alt="image1" "> 
      
       </div>
 
       <div class="item">
-         <img src="/resources/image2.jpg" alt="image2" style="width:100%;">
+         <img src="resources/image6.jpg" alt="image2" style="width:100%;">
        
       </div>
     
       <div class="item">
-    <img src="/resources/image3.jpg" alt=" image3" style="width:100%;">
+    <img src="resources/image7.jpg" alt=" image3" style="width:100%;">
          
       </div>
      
     
       <div class="item">
-    <img src="/resources/image4.jpg" alt=" image4" style="width:100%;">
+    <img src="resources/image9.jpg" alt=" image4" style="width:100" height:"25%";>
          
       </div>
-       <
-    
-      <div class="item">
-    <img src="/resources/image5.jpg" alt=" image5" style="width:100%;">
-         
-      </div>
+      
     </div>
 
     <!-- Left and right controls -->
@@ -65,6 +63,7 @@
       <span class="sr-only">Next</span>
       </a>
       </div>
+      </center>
 
 </body>
 <%@include file="footer.jsp" %>
