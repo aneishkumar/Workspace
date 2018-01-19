@@ -51,6 +51,13 @@ public class CartDAOImpl implements CartDAO {
 		Cart cart=(Cart)session.get(Cart.class,cartid);
 		return cart;
 	}
+	public Cart getCartItemPi(int productid)
+	{
+		Session session=sessionFactory.openSession();
+		
+		Cart cart=(Cart)session.get(Cart.class,productid);
+		return cart;
+	}
 	public void deleteCartItem(Cart cart)
 	{
 		Session session=sessionFactory.openSession();

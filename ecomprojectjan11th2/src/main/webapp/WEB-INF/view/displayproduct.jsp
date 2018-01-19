@@ -21,7 +21,9 @@
                    <tr> <td>Product Description:${productsee.description}</td></tr>
                    
                    </table>
-      <c:if test="${productsee.quantity>0}">             
+      <c:if test="${productsee.quantity>0}">
+      <c:if test="${i<8}">   
+                
     <form action= "${addcart}" method="get">
 </td><br>
 <td>
@@ -30,26 +32,40 @@
 <select name="quantity">
 
     <option hidden="true"><h4>1</h4></option>
-    <c:if test="${productsee.quantity>1}">  
+    <c:if test="${productsee.quantity>1}">
+    <c:if test="${i<7}">  
     <option name="2" >2</option>
     </c:if>
+    </c:if>
     <c:if test="${productsee.quantity>2}">  
+    <c:if test="${i<6}">
     <option name="3" >3</option>
     </c:if>
-    <c:if test="${productsee.quantity>3}">  
+    </c:if>
+    <c:if test="${productsee.quantity>3}"> 
+    <c:if test="${i<5}"> 
     <option name="4" >4</option>
     </c:if>
+    </c:if>
     <c:if test="${productsee.quantity>4}">
+    <c:if test="${i<4}">
     <option name="5" >5</option>
     </c:if>
+    </c:if>
     <c:if test="${productsee.quantity>5}">
+    <c:if test="${i<3}">
     <option name="6">6</option>
     </c:if>
+    </c:if>
     <c:if test="${productsee.quantity>6}">
+    <c:if test="${i<2}">
     <option name="7" >7</option>
     </c:if>
+    </c:if>
+    <c:if test="${i<1}">
     <c:if test="${productsee.quantity>7}">
     <option name="8" >8</option>
+    </c:if>
     </c:if>
     
 </select><br><br>
@@ -59,6 +75,13 @@
 
 </form>
     </c:if>
+</c:if>
+<c:if test="${productsee.quantity==0}">
+<p>No stock </p>
+</c:if>
+<c:if test="${i>7}">
+<p>Maximum limited reached</p>
+</c:if>
 
 </body>
 </html>

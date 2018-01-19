@@ -8,4 +8,5 @@ public interface CartDAO {
 	public List<Cart> getCartItems(String username);
 	public void deleteCartItem(Cart cart);
 	public void updateCartItem(Cart cart);
+	public Cart getCartItemPi(int productid);
 }

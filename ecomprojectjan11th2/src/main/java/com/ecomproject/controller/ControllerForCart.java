@@ -1,6 +1,8 @@
 package com.ecomproject.controller;
 
 
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -25,10 +27,33 @@ public class ControllerForCart
 	@Autowired
 	CartDAO cartdao;
 	@RequestMapping(value="seepro", method=RequestMethod.GET)
-	public String getProduct(@RequestParam("pid")int id,Model model,Cart cart,HttpSession session)
+	public String getProduct(@RequestParam("pid")int id,Model model,HttpSession session)
 	{
+		int i=0;int cartid=0;
 		Product product=productdao.getProduct(id);
 		model.addAttribute("productsee", product);
+		try
+		{
+			String username=(String)session.getAttribute("Username");
+			List<Cart> list=cartdao.getCartItems(username);
+			for(Cart cart2:list)
+			{
+				if(cart2.getProductid()==id)
+				{
+					
+					cartid=cart2.getCartid();
+				}
+			}
+			Cart cart=cartdao.getCartItem(cartid);
+			i=cart.getProductquantity();
+		  
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception Arised"+e);
+		}
+		
+		model.addAttribute("i", i);
 	
 		
 		return"displayproduct";
@@ -36,11 +61,14 @@ public class ControllerForCart
 	@RequestMapping(value="editcart", method=RequestMethod.GET)
 	public String getProduct1(@RequestParam("pid")int cartid,Model model,HttpSession session)
 	{
+		
 		Cart cart=cartdao.getCartItem(cartid);
 		int id=cart.getProductid();
 		cartdao.deleteCartItem(cart);
 		Product product=productdao.getProduct(id);
 		model.addAttribute("productsee", product);
+		
+		
 		
 		return"displayproduct";
 	}

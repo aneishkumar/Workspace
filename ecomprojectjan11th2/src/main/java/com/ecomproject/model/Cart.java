@@ -13,6 +13,7 @@ public class Cart {
 	@Id
 	private int cartid;
 	@Column
+	
 	private int productid;
 	@Column
 	private String productname;
