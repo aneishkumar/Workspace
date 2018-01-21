@@ -51,6 +51,7 @@ public class H2Config
 		localSessionFacBuilder.addAnnotatedClass(Category.class);
 		localSessionFacBuilder.addAnnotatedClass(Product.class);
 		localSessionFacBuilder.addAnnotatedClass(Cart.class);
+		localSessionFacBuilder.addAnnotatedClass(Ordertable.class);
 		
 		
 		SessionFactory sessionFactory=localSessionFacBuilder.buildSessionFactory();

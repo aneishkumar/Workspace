@@ -59,7 +59,8 @@
     <table>
     <tr><td></td><td></td><td></td><td>Total:${total}</td></tr>
     </table>
-
+<a href="checkout">Checkout </a><br>
+      
 </body>
 </html>
 <%@include file="footer.jsp" %>

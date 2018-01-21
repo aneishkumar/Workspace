@@ -61,12 +61,34 @@ public class ControllerForCart
 	@RequestMapping(value="editcart", method=RequestMethod.GET)
 	public String getProduct1(@RequestParam("pid")int cartid,Model model,HttpSession session)
 	{
-		
+		int i=0;int cartid1=0;
 		Cart cart=cartdao.getCartItem(cartid);
 		int id=cart.getProductid();
 		cartdao.deleteCartItem(cart);
 		Product product=productdao.getProduct(id);
 		model.addAttribute("productsee", product);
+		try
+		{
+			String username=(String)session.getAttribute("Username");
+			List<Cart> list=cartdao.getCartItems(username);
+			for(Cart cart2:list)
+			{
+				if(cart2.getProductid()==id)
+				{
+					
+					cartid1=cart2.getCartid();
+				}
+			}
+			Cart cart2=cartdao.getCartItem(cartid1);
+			i=cart2.getProductquantity();
+		  
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception Arised"+e);
+		}
+		
+		model.addAttribute("i", i);
 		
 		
 		
