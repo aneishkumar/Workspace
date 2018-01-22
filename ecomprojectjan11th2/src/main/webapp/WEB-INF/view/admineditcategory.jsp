@@ -14,8 +14,8 @@
 <font color="red"><form:form action="updatecategory" method="post" commandName="category1">
 <fieldset>
     <label><b>Category ID</b></label>
-    <form:input type="text" path="catid" value="${categorydata.catid}" /><br>
-    <label><b>Category Name</b></label>
+    <form:input type="text" path="catid" value="${categorydata.catid}" readonly="true"/><br>
+    <br><label><b>Category Name</b></label>
     <form:input type="text" path="catname" value="${categorydata.catname}" /><br>
     <br><label><b>Category Description</b></label>
     <form:input type="text" path="catdescription" value="${categorydata.catdescription}" /><br>

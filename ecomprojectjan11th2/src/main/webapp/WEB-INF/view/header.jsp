@@ -47,23 +47,25 @@
 
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="starting"><font color="white">E-RESTURANT</font></a>
+      <a class="navbar-brand" ><font color="white">E-RESTURANT</font></a>
     </div>
     <ul class="nav navbar-nav">
     <c:choose>
     <c:when test="${sessionScope.UserLoggedIn == 'true'}">
-       <li>  <a href="home"><font color="white">Home</font></a></li>
+       <li>  <a href="starting"><font color="white">Home</font></a></li>
       <li ><a href="aboutus"><font color="white">About us</font></a></li>      
       <li><a href="contactus"><font color="white">Contact Us</font></a></li>
             
             <li><a href="orderfood"><font color="white">Order Food </font></a></li>
             <li><a href="cart"><font color="white">Cart </font></a></li>
             <li><a href="logout"><font color="white">Log-out </font></a></li> 
+            <li><a ><font color="white"> Welcome:${sessionScope.Username} </font></a></li> 
+            
             </c:when>
             
       
            <c:when test="${sessionScope.Administrator == 'true'}">
-       <li>    <a href="home"><font color="white">Home</font></a></li>
+       <li>    <a href="starting"><font color="white">Home</font></a></li>
       <li ><a href="aboutus"><font color="white">About us</font></a></li>      
       <li><a href="contactus"><font color="white">Contact Us</font></a></li>
       <li><a href="admin"><font color="white">Control</font></a></li>
@@ -72,14 +74,16 @@
             <li><a href="seeallsupplier"><font color="white">Supplier </font></a></li>
             <li><a href="seeallcategory"><font color="white">Categories </font></a></li>
             <li><a href="logout"><font color="white">Log-out </font></a></li> 
+            <li><a ><font color="white"> Welcome:Admin </font></a></li> 
             </c:when>
             <c:otherwise>
-          <li>  <li ><a href="home"><font color="white">Home</font></a></li>
+          <li>  <li ><a href="starting"><font color="white">Home</font></a></li>
       <li ><a href="aboutus"><font color="white">About us</font></a></li>      
       <li><a href="register"><font color="white">Register User</font></a></li>
       <li><a href="Login"><font color="white">Login</font></a></li>
             <li><a href="contactus"><font color="white">Contact Us </font></a></li>
             <li><a href="orderfood"><font color="white">See Food </font></a></li>
+            <li><a ><font color="white"> Welcome:Guest </font></a></li> 
             </c:otherwise>
             </c:choose>
       
@@ -89,17 +93,7 @@
         
         
       
-      <li> <form class="navbar-form navbar-left" action="">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="search">
-        <div class="input-group-btn">
-          <button class="btn btn-default" type="submit">
-            <i class="glyphicon glyphicon-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
-    </li>
+      
       </ul>
       </nav>
       

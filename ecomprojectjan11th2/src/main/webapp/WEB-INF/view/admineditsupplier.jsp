@@ -11,14 +11,14 @@
 <body>
 <center>
 <h2><b>Admin Edit Category</b></h2>
-<font color="red"><form:form action="updatecategory" method="post" commandName="category1">
+<font color="red"><form:form action="updatesupplier" method="post" commandName="supplier1">
 <fieldset>
-    <label><b>Supplier ID</b></label>
-    <form:input type="text" path="supplierid" value="${categorydata.catid}" /><br>
+     <label><b>Supplier Id</b></label>
+    <form:input type="text" path="supplierid" value="${supplierdata.supplierid}" readonly="true" />
     <label><b>Supplier Name</b></label>
-    <form:input type="text" path="suppliername" value="${categorydata.catname}" /><br>
+    <form:input type="text" path="suppliername" value="${supplierdata.suppliername}" /><br>
     <br><label><b>Supplier Address</b></label>
-    <form:input type="text" path="supplieraddress" value="${categorydata.catdescription}" /><br>
+    <form:input type="text" path="supplieraddress" value="${supplierdata.supplieraddress}" /><br>
     
     
     <input type="submit" value="edit"/>

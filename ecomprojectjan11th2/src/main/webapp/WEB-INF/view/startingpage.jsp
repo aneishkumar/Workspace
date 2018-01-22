@@ -31,7 +31,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-     <img src="resources/image1.jpg" alt="image1" "> 
+     <img src="resources/image1.jpg"  alt="image1" "> 
      
       </div>
 
@@ -64,6 +64,13 @@
       </a>
       </div>
       </center>
+      <h1>Break-Fast <a href="breakfastfood">(View all) </a></h1>
+      <a href="seepro?pid=162"><img src="resources/162.jpg" alt="image1" style="width:100%;"> </a>
+      <h2>Lunch <a href="lunchfood">(View all) </a></h2>
+      <a href="seepro?pid=163"><img src="resources/image1.jpg" alt="image1" style="width:100%;"> </a>
+      <h2>Dinner <a href="dinnerfood">(View all) </a></h2>
+      <a href="seepro?pid=195"><img src="resources/195.jpg" alt="image1" style="width:100%;"> </a>
+      
 
 </body>
 <%@include file="footer.jsp" %>

@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@include file="header.jsp" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -13,11 +14,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+<h1>Delievery Address</h1>
 <div class="container">
 	<div class="row">
 		<div class="span5">
             <table class="table table-striped table-condensed">
-            <form:form name="myForm" id="formregister" action="proceed" method="POST"  commandName="ordertable">
+            <form:form  action="proceed" method="POST"  commandName="ordertable">
 	<tr>
 			<td>Name :</td>
 			<td><form:input path="name" required="true" /> </td>
@@ -38,7 +40,7 @@
 
          <tr>
 			<td>Mobile Number:</td>
-			<td><form:password path="mobilenumber" required="true" /></td>
+			<td><form:input path="mobilenumber" required="true" /></td>
 		</tr>
 		
 		
@@ -52,3 +54,4 @@
 
 </body>
 </html>
+<%@include file="footer.jsp" %>

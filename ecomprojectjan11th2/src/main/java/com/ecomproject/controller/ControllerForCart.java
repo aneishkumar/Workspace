@@ -1,8 +1,7 @@
 package com.ecomproject.controller;
 
 
-import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
+
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
+
 
 import com.ecomproject.DAO.*;
 import com.ecomproject.model.*;
@@ -120,7 +119,9 @@ public class ControllerForCart
 	cart.setProductname(product.getName());
 	cart.setProductprice(product.getPrice());
 	cart.setCategory(product.getCatId());
+	
 	cart.setSupplierid(product.getSupplierid());
+	cart.setOrdered(false);
 	model.addAttribute("cart",new Cart());
 	
 	cartdao.addToCart(cart);
@@ -136,10 +137,20 @@ public class ControllerForCart
 		
 	}
 	
-	model.addAttribute("prolist",this.productdao.getProductList());
+	   
+	model.addAttribute("cartlist",this.cartdao.getCartItems(username));
+List<Cart> list1=cartdao.getCartItems(username);
+	
+	int total=0;
+	for(Cart cart1:list1)
+	{
+		total=total+(cart1.getProductquantity()*cart1.getProductprice());
+	}
+	model.addAttribute("total", total);
 
-
-	return "displayallproduct";		
+	return "cartpage";
+	
+	
 		
 	}
 	@RequestMapping(value="cart", method=RequestMethod.GET)

@@ -60,11 +60,11 @@ public class UserDAOImpl implements UserDAO
 			
 		}
 		
-		public User getuser(String id)
+		public User getuser(String username)
 		{
 				Session session=sessionFactory.openSession();
 				Transaction trans=session.beginTransaction();
-				User user=(User)session.get(User.class,id);
+				User user=(User)session.get(User.class,username);
 				trans.commit();
 				session.flush();
 				session.close();

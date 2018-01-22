@@ -53,7 +53,7 @@ public class OrderDAOImpl implements OrderDAO {
 		session.close();
 		
 	}
-	public Ordertable getorderdetails(String id)
+	public Ordertable getorderdetails(int id)
 	{
 			Session session=sessionFactory.openSession();
 			Transaction trans=session.beginTransaction();

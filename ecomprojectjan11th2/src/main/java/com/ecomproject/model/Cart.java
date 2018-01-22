@@ -18,6 +18,8 @@ public class Cart {
 	@Column
 	
 	private int productid;
+    @Column
+	private int orderid;
 	@Column
 	private String productname;
 	@Column
@@ -32,7 +34,19 @@ public class Cart {
 	
 	private String Username;
 	@Column
-	boolean ordered=false;
+	boolean ordered;
+	public int getOrderid() {
+		return orderid;
+	}
+	public void setOrderid(int orderid) {
+		this.orderid = orderid;
+	}
+	public boolean isOrdered() {
+		return ordered;
+	}
+	public void setOrdered(boolean ordered) {
+		this.ordered = ordered;
+	}
 	public int getCartid() {
 		return cartid;
 	}

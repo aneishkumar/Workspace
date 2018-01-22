@@ -20,7 +20,7 @@ public class Ordertable
 	@Column
 	private String username;
 	@Column
-	private int mobilenumber;
+	private String mobilenumber;
 	
 	@Column
 	private String landmark;
@@ -29,7 +29,10 @@ public class Ordertable
 	
 	@Column
 	private int pincode;
+	@Column
+	private int totalamount;
 	
+
 	@Column
 	private String status;
 	public int getOrderid() {
@@ -56,11 +59,11 @@ public class Ordertable
 		this.username = username;
 	}
 
-	public int getMobilenumber() {
+	public String getMobilenumber() {
 		return mobilenumber;
 	}
 
-	public void setMobilenumber(int mobilenumber) {
+	public void setMobilenumber(String mobilenumber) {
 		this.mobilenumber = mobilenumber;
 	}
 
@@ -94,6 +97,14 @@ public class Ordertable
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public int getTotalamount() {
+		return totalamount;
+	}
+
+	public void setTotalamount(int totalamount) {
+		this.totalamount = totalamount;
 	}
 
 	

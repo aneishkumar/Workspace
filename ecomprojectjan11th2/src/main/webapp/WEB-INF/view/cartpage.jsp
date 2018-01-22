@@ -20,7 +20,7 @@
             <table class="table table-striped table-condensed">
         <tr>
         
-          <th>Cart ID</th>
+          <th>Image</th>
             <th>Product Name</th>
             <th>Product Quantity</th>
             
@@ -34,11 +34,12 @@
               
         </tr>
 <c:forEach items="${cartlist}" var="cart">
+<c:url value="/resources/${cart.productid}.jpg" var="imageurl"></c:url>
                 
                 <tr>
                
                
-                     <td>${cart.cartid}</td>
+                     <td><img src="${imageurl}" height="100" width="100"></td>
                     <td>${cart.productname}</td>
                     <td>${cart.productquantity}</td>
                     
@@ -52,14 +53,14 @@
                    
             </tr>
             </c:forEach>
-                  
+            <tr><td></td><td></td><td><a href="checkout"><button>Checkout</button> </a><br></td><td><a href="allproducts"><button>Continue Shopping</button> </a><br></td></tr>      
             
     </table>
     </div> </div> </div>
     <table>
     <tr><td></td><td></td><td></td><td>Total:${total}</td></tr>
     </table>
-<a href="checkout">Checkout </a><br>
+
       
 </body>
 </html>

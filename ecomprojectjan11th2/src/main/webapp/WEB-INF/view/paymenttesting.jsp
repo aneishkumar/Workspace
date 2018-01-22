@@ -9,7 +9,10 @@
 </head>
 <body><h1>Testing</h1>
       
-      <a href="paymentsuccess">Payment successful </a><br>
+      <a href="paymentsuccess?pid=${orderid}">Confirm Order</a><br>
+      <a href="deleteorder?pid=${orderid}">Cancel Order</a><br>
+      
+      
       
      
 

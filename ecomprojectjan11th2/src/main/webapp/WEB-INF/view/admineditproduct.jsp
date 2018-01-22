@@ -14,9 +14,9 @@
 <font color="red"><form:form action="updateproduct" method="post" commandName="product1">
 <fieldset>
     <label><b>Product ID</b></label>
-    <form:input type="text" path="id" value="${productdata.id}" /><br>
+    <form:input type="text" path="id" value="${productdata.id}" readonly="true" /><br>
     <label><b>Product Name</b></label>
-    <form:input type="text" path="name" value="${productdata.id}" /><br>
+    <form:input type="text" path="name" value="${productdata.name}" /><br>
     <label><b>Product price</b></label>
     <form:input type="text" path="price" value="${productdata.price}" /><br>
     <br><label><b>Quantity</b></label>
