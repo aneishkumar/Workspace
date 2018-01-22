@@ -12,9 +12,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <STYLE>
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+  </STYLE>
 </head>
 <body>
-<h1>Delievery Address</h1>
+<h1>Delivery Address</h1>
 <div class="container">
 	<div class="row">
 		<div class="span5">
@@ -45,7 +57,7 @@
 		
 		
 		<tr>
-			<td></td><td colspan="2"><input type="submit" class="btn btn-success" value="Proceed To Payment"></td>
+			<td><a href="cart" class="button">Go back </a></td><td colspan="2"><input type="submit" class="button" value="Proceed To Payment"></td>
 		</tr>
 		</form:form>
 		</b>

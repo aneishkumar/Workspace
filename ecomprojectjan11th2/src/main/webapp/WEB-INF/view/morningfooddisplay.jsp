@@ -12,20 +12,35 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <STYLE>
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+  </STYLE>
 </head>
 <body>
+<center>
+<BR>
+<h1><font color="#008000"><B>BREAK-FAST</B> </font> </h1></center>
 <div class="container">
 	<div class="row">
 		<div class="span5">
             <table class="table table-striped table-condensed">
 <tr>
-          <th>Image</th>
-          <th>Product ID</th>
-            <th>Product Name</th>
-            <th>Product Quantity</th>
-            <th>Product Price</th>
+          <th></th>
+          
+            <th> Name</th>
             
-            <th>Product Description</th></tr>
+            <th>Price</th>
+            
+            <th>Description</th></tr>
 
 
 <c:if test="${!empty prolist}">
@@ -37,13 +52,13 @@
                     <c:url value="/resources/${Product.id}.jpg" var="imageurl"></c:url>
                 <tr>
                
-                <td><img src="${imageurl}" height="100" width="100"></td>
-                <td>${Product.id}</td>
+                <td><img src="${imageurl}" height="303" width="303"></td>
+                
                     <td>${Product.name}</td>
-                    <td>${Product.quantity}</td>
+                    
                     <td>${Product.price}</td>                   
                     <td>${Product.description}</td>
-                    <td><a href="seepro?pid=${Product.id}">Order now</a></td>
+                    <td><a href="seepro?pid=${Product.id}" class="button">Order now</a></td>
                     </tr>
                      <br>
                     
@@ -55,6 +70,8 @@
            
             </c:if>
 </table>
+</div>
+</div>
 </div>
 </body>
 </html>

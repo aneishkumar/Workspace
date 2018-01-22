@@ -34,6 +34,7 @@ public class ControllerForOrder {
 	public String sendregister(Ordertable ordertable)
 	{
 		
+		
 		return "checkout";
 	}
 	@RequestMapping(value="proceed", method=RequestMethod.POST)
@@ -44,16 +45,29 @@ public class ControllerForOrder {
 		ordertable.setStatus("no");
 		orderdao.addorder(ordertable);
 		model.addAttribute("ordertable",new Ordertable());
+		
+		
+		
+		
+		return "paymentpage";		
+		
+
+}
+	@RequestMapping(value="paymentsuccess", method=RequestMethod.GET)
+	public String getProduct1(Model model,HttpSession session)
+	{
+		String username=(String)session.getAttribute("Username");
 		List<Ordertable> list=orderdao.getOrderList(); 
-		for(Ordertable ordertable1:list)
+		int orderid=0;
+for(Ordertable ordertable1:list)
 			
 		{
 			if(ordertable1.getUsername()==username)
 			{
 				if(ordertable1.getStatus()=="no")
 				{
-					int i=ordertable1.getOrderid();
-					model.addAttribute("orderid",i);
+					orderid=ordertable1.getOrderid();
+					
 				}
 			}
 			
@@ -61,30 +75,20 @@ public class ControllerForOrder {
 		}
 		
 		
-		return "paymenttesting";		
-		
-
-}
-	@RequestMapping(value="paymentsuccess", method=RequestMethod.GET)
-	public String getProduct1(@RequestParam("pid")int orderid,Model model,HttpSession session)
-	{
-		
-		
-		String username=(String)session.getAttribute("Username");
 		   
 		model.addAttribute("cartlist",this.cartdao.getCartItems(username));
-List<Cart> list=cartdao.getCartItems(username);
+List<Cart> list2=cartdao.getCartItems(username);
 		
 		int total=0;
-		for(Cart cart:list)
+		for(Cart cart:list2)
 		{
 			total=total+(cart.getProductquantity()*cart.getProductprice());
 		}
 		Ordertable ordertable=orderdao.getorderdetails(orderid);
 		ordertable.setStatus("yes");
 		ordertable.setTotalamount(total);
-		orderdao.addorder(ordertable);
-		for(Cart cart:list)
+		
+		for(Cart cart:list2)
 		{
 			Product product=productdao.getProduct(cart.getProductid());
 			if(product.getId()==cart.getProductid())
@@ -105,7 +109,7 @@ List<Cart> list=cartdao.getCartItems(username);
 		
 			
 		
-		return"startingpage";
+		return"ordersuccess";
 	}
 	
 }

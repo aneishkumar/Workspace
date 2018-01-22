@@ -25,6 +25,9 @@ public class ControllerForCart
 	ProductDAO productdao;
 	@Autowired
 	CartDAO cartdao;
+	@Autowired
+	OrderDAO orderdao;		
+	
 	@RequestMapping(value="seepro", method=RequestMethod.GET)
 	public String getProduct(@RequestParam("pid")int id,Model model,HttpSession session)
 	{
@@ -147,6 +150,17 @@ List<Cart> list1=cartdao.getCartItems(username);
 		total=total+(cart1.getProductquantity()*cart1.getProductprice());
 	}
 	model.addAttribute("total", total);
+	
+	List<Ordertable> list11=orderdao.getOrderList(); 
+	for(Ordertable ordertable1:list11)
+	{
+		if(ordertable1.getStatus()=="no")
+			
+		{
+			int idw=ordertable1.getOrderid();
+			orderdao.deleteorderid(idw);
+		}
+	}
 
 	return "cartpage";
 	
@@ -167,6 +181,18 @@ List<Cart> list=cartdao.getCartItems(username);
 			total=total+(cart.getProductquantity()*cart.getProductprice());
 		}
 		model.addAttribute("total", total);
+		List<Ordertable> list11=orderdao.getOrderList(); 
+		for(Ordertable ordertable1:list11)
+		{
+			if(ordertable1.getStatus()=="no")
+				
+			{
+				int id=ordertable1.getOrderid();
+				orderdao.deleteorderid(id);
+			}
+		}
+		
+		
 
 		return "cartpage";
 	}

@@ -11,6 +11,18 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <STYLE>
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+  </STYLE>
 </head>
 <body>
 
@@ -33,6 +45,7 @@
             
               
         </tr>
+       <c:if test="${!empty cartlist}">
 <c:forEach items="${cartlist}" var="cart">
 <c:url value="/resources/${cart.productid}.jpg" var="imageurl"></c:url>
                 
@@ -53,13 +66,12 @@
                    
             </tr>
             </c:forEach>
-            <tr><td></td><td></td><td><a href="checkout"><button>Checkout</button> </a><br></td><td><a href="allproducts"><button>Continue Shopping</button> </a><br></td></tr>      
-            
+            <tr><td></td><td></td><td></td><td><b>Total:${total}</b></td></tr>
+            <tr><td></td><td></td><td><a href="checkout" class="button">Checkout </a></td><td><a href="allproducts" class="button">Continue Shopping </a><br></td></tr>      
+            </c:if>
     </table>
     </div> </div> </div>
-    <table>
-    <tr><td></td><td></td><td></td><td>Total:${total}</td></tr>
-    </table>
+    
 
       
 </body>

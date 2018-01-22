@@ -43,7 +43,7 @@ public class OrderDAOImpl implements OrderDAO {
 		return catlist;
 		
 	}
-	public void deleteorderid(String id)
+	public void deleteorderid(int id)
 	{
 		Session session=sessionFactory.openSession();
 		Transaction tran=session.beginTransaction();
