@@ -95,7 +95,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li ><a href="contactus"><font color="white"><b>Contact us</b></font></a></li>
-      <li ><a href="feedback"><font color="white"><b>Enquiry</b></font></a></li>      
+         
       
       </ul>
        <ul class="nav navbar-nav navbar-right">
