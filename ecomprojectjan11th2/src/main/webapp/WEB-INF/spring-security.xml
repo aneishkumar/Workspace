@@ -39,7 +39,7 @@
   <security:intercept-url pattern="/cart" access="hasRole('ROLE_USER')" />
   <security:intercept-url pattern="/seepro" access="hasRole('ROLE_USER')" />
  	
-		<security:form-login login-page="/Login" default-target-url="/" login-processing-url="/performlogin" authentication-failure-url="/Login" authentication-success-forward-url="/loginsuccess" />
+		<security:form-login login-page="/Login" default-target-url="/" login-processing-url="/performlogin" authentication-failure-url="/loginfail" authentication-success-forward-url="/loginsuccess" />
 		<security:logout logout-url="/logout" invalidate-session="true" logout-success-url="/" />
 		<security:csrf disabled="true" />
 </security:http>

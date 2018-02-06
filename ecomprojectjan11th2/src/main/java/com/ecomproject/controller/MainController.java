@@ -30,6 +30,12 @@ public class MainController {
 		  return "startingpage";
 		  
 	}
+	@RequestMapping("/loginfail")
+	public String showhome345()
+	{
+		  return "loginfailure";
+		  
+	}
 	
 	@RequestMapping("/admin")
 	public String showadmin()

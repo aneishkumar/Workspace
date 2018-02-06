@@ -18,7 +18,7 @@
 
 <center>
 
-<h2>Register Page</h2>
+
 
 <div class="container" style="margin-top:40px" ">
 		<div class="row">

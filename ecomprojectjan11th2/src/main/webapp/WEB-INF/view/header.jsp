@@ -82,7 +82,7 @@
       <li><a href="register"><font color="white">Register User</font></a></li>
       <li><a href="Login"><font color="white">Login</font></a></li>
             <li><a href="contactus"><font color="white">Contact Us </font></a></li>
-            <li><a href="orderfood"><font color="white">See Food </font></a></li>
+            <li><a href="orderfood"><font color="white">All Food </font></a></li>
             <li><a ><font color="white"> Welcome:Guest </font></a></li> 
             </c:otherwise>
             </c:choose>

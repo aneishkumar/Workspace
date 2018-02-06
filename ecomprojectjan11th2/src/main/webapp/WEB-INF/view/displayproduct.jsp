@@ -85,7 +85,7 @@
 <br>
 <p><font color="red"><B> Maximum limited reached</p>
 </c:if>
-
+<p> Maximum purchase is 8 per item</p>
 </body>
 </html>
 <%@include file="footer.jsp" %>
